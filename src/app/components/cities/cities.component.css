@@ -1,0 +1,45 @@
+.cities {
+  border: 1px grey solid;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: darksalmon;
+  margin-top: 50px;
+}
+
+.drop-down-panel {
+  border: 1px gray solid;
+  border-radius: 5px;
+  background-color: oldlace;
+  font-size: 20px;
+}
+
+.drop-down-panel:hover {
+  background-color: lemonchiffon;
+}
+.panel {
+  margin-left: auto;
+  margin-right: auto;
+  width: 600px;
+}
+
+/* This is for button style */
+.button {
+  padding: 10px 20px;
+  font-size: 20px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #04AA6D;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}

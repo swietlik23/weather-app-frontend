@@ -1,0 +1,31 @@
+<div class="panel">
+  <div class="cities">
+    <div class="drop-down-panel">
+      <ng-multiselect-dropdown
+        [placeholder]="'select cities to check the weather forecast'"
+        [settings]="dropdownSettings"
+        [data]="dropdownList"
+        [(ngModel)]="selectedItems"
+        (onSelect)="onItemSelect($event)"
+        (onSelectAll)="onSelectAll($event)"
+      >
+      </ng-multiselect-dropdown>
+    </div>
+  </div>
+  <div *ngIf="selectedItems.length != 0">
+    <button class="button" (click)="getForecastForCities(selectedItems)">Get the forecast!</button>
+  </div>
+</div>
+<div *ngIf="selectedItems.length == 0">
+  {{cleanForecastList()}}
+</div>
+<div *ngIf="selectedItems.length > 0 || this.forecastList.length != 0">
+  <div *ngFor="let forecast of forecastList">
+    <br>
+    <ul>
+      <div class="middle-page">
+        <app-weather-tile [singleForecast]="forecast!"></app-weather-tile>
+      </div>
+    </ul>
+  </div>
+</div>
