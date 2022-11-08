@@ -3,11 +3,11 @@ import {CityObject, ForecastObject, WeatherClientService} from "../../services/w
 import { IDropdownSettings } from 'ng-multiselect-dropdown';
 
 @Component({
-  selector: 'app-cities',
-  templateUrl: './cities.component.html',
-  styleUrls: ['./cities.component.css']
+  selector: 'app-main-tile',
+  templateUrl: './main-tile.component.html',
+  styleUrls: ['./main-tile.component.css']
 })
-export class CitiesComponent implements OnInit {
+export class MainTileComponent implements OnInit {
 
   cities: Array<CityObject>;
   forecastList: Array<ForecastObject>;
@@ -16,7 +16,6 @@ export class CitiesComponent implements OnInit {
   dropdownList: Array<CityObject>;
   selectedItems: Array<CityObject>;
   dropdownSettings:IDropdownSettings;
-
 
   ngOnInit(): void {
     this.weatherClientService.getCities().subscribe(value => {
@@ -32,15 +31,15 @@ export class CitiesComponent implements OnInit {
       singleSelection: false,
       idField: 'name',
       textField: 'name',
-      selectAllText: 'Select All',
-      unSelectAllText: 'UnSelect All',
       limitSelection:5,
       allowSearchFilter: true
     };
   }
+
   onItemSelect(item: any) {
     console.log(item);
   }
+
   onSelectAll(items: any) {
     console.log(items);
   }

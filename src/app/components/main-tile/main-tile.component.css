@@ -1,4 +1,4 @@
-.cities {
+.cities-panel {
   border: 1px grey solid;
   border-radius: 5px;
   padding: 10px;
@@ -11,6 +11,7 @@
   border-radius: 5px;
   background-color: oldlace;
   font-size: 20px;
+  text-transform: capitalize;
 }
 
 .drop-down-panel:hover {

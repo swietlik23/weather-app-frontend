@@ -2,10 +2,7 @@
   width: 400px;
   min-height: 150px;
   max-height: 200px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 10px;
-  margin-bottom: 2px;
+  margin: 10px auto 2px;
 }
 
 .city-tile {
@@ -19,16 +16,14 @@
   font-weight: bold;
   height: 25%;
   text-align: left;
-  /*vertical-align: top;*/
-  /*height: 60px;*/
-  margin: 0px auto 0;
+  text-transform: uppercase;
+  margin: 0 auto 0;
   border-top-right-radius: 20px;
   box-shadow: 20px 20px 20px 10px gray;
 }
 
 .temperature-icon-tile {
-  /*position: center;*/
-  border: 2px coral solid;
+  border: 3px coral solid;
   padding: 10px;
   background-color: beige;
   font-family: Verdana, sans-serif;
@@ -39,7 +34,6 @@
 .text-middle-page {
   margin: auto;
   width: 40%;
-  /*padding-top: 10px;*/
 }
 
 .icon-middle-page {

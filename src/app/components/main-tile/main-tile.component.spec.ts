@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CitiesComponent } from './cities.component';
+import { MainTileComponent } from './main-tile.component';
 
 describe('CitiesComponent', () => {
-  let component: CitiesComponent;
-  let fixture: ComponentFixture<CitiesComponent>;
+  let component: MainTileComponent;
+  let fixture: ComponentFixture<MainTileComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CitiesComponent ]
+      declarations: [ MainTileComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(CitiesComponent);
+    fixture = TestBed.createComponent(MainTileComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

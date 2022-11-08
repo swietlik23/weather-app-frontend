@@ -1,10 +1,10 @@
 <div class="weather-tile">
   <div class="city-tile">
-      {{singleForecast.cityName | uppercase}}
+      {{singleForecast.cityName}}
   </div>
   <div class="temperature-icon-tile">
     <div class="text-middle-page">
-      Temp.: {{singleForecast.temperatureInCelsius | number: '1.1-1'}} <sup>o</sup>C
+      Temp.: {{singleForecast.temperatureInCelsius}} <sup>o</sup>C
     </div>
     <div class="icon-middle-page">
       <img src={{this.imagePath!}}>
