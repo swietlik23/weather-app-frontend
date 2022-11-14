@@ -20,7 +20,9 @@ export class MainTileComponent implements OnInit {
   ngOnInit(): void {
     this.weatherClientService.getCities().subscribe(value => {
       this.dropdownList = value
-    });
+    })
+    console.log("Weather-tile: got cities form weatherClientService")
+    ;
 
     this.forecastList = [];
 

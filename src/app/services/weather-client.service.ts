@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {HttpClient, HttpClientModule, HttpParams} from "@angular/common/http";
+import {HttpClient, HttpParams} from "@angular/common/http";
 import {Observable} from "rxjs";
 
 @Injectable({
@@ -7,17 +7,22 @@ import {Observable} from "rxjs";
 })
 export class WeatherClientService {
 
+  backendServiceUrl = 'https://weather-service-backend.herokuapp.com';
+  getCitiesUrl = this.backendServiceUrl + '/cities';
+  getForecastForManyCitiesUrl = this.backendServiceUrl + '/forecasts?';
+
   constructor(private httpClient: HttpClient) { }
 
   public getCities(): Observable<Array<CityObject>> {
-    return this.httpClient.get<Array<CityObject>>('http://localhost:8080/cities');
+    console.log('WeatherClient -> getCities: ' + this.getCitiesUrl);
+    return this.httpClient.get<Array<CityObject>>(this.getCitiesUrl);
   }
 
   public getForecastForManyCities(cityNames: string[]): Observable<any> {
     let params = new HttpParams();
     params = params.appendAll({'city' : cityNames});
-    console.log('http://localhost:8080/forecasts?' + params.toString());
-    return this.httpClient.get('http://localhost:8080/forecasts?' + params.toString())
+    console.log(this.getForecastForManyCitiesUrl + params.toString());
+    return this.httpClient.get(this.getForecastForManyCitiesUrl + params.toString())
   }
 }
 

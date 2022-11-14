@@ -3,24 +3,32 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "node server.js",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "heroku-postbuild": "ng build --configuration development"
   },
   "private": true,
   "dependencies": {
+    "@angular-devkit/build-angular": "^14.2.6",
     "@angular/animations": "^14.2.0",
+    "@angular/cli": "~14.2.6",
     "@angular/common": "^14.2.0",
     "@angular/compiler": "^14.2.0",
+    "@angular/compiler-cli": "^14.2.0",
     "@angular/core": "^14.2.0",
     "@angular/forms": "^14.2.0",
     "@angular/platform-browser": "^14.2.0",
     "@angular/platform-browser-dynamic": "^14.2.0",
     "@angular/router": "^14.2.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
     "ng-multiselect-dropdown": "^1.0.0-beta.19",
+    "path": "^0.12.7",
     "rxjs": "~7.5.0",
     "tslib": "^2.4.0",
+    "typescript": "~4.7.2",
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
@@ -35,5 +43,9 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.0.0",
     "typescript": "~4.7.2"
+  },
+  "engines": {
+    "node": "16.18.0",
+    "npm": "8.19.2"
   }
 }

@@ -1,27 +1,31 @@
-# AngularTest2
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.6.
+# Weather App Frontend
 
-## Development server
+This application is a UI based on the WeatherApp backend application. See it on:
+* GitHub: [WeatherAppBackend - GitHub](https://github.com/swietlik23/weather-app-backend)
+* Heroku: [WeatherAppBackend - Heroku](https://weather-service-backend.herokuapp.com/swagger-ui.html)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+__WeatherApp__ allows you to check weather conditions for given cities.
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Presentation
 
-## Build
+You can select up to 5 cities from the drop-down list to check weather forecasts for them.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+![dropDownList](https://github.com/swietlik23/weather-app-frontend/blob/master/imagesToReadme/dropDownList.PNG)
 
-## Running unit tests
+After selecting them and clicking on the "get forecast" button, you will see tiles with the current temperature and an icon symbolizing the predicted weather conditions in the near future.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+![tiles](https://github.com/swietlik23/weather-app-frontend/blob/master/imagesToReadme/tiles.PNG)
+## Data source
 
-## Running end-to-end tests
+The application retrieves weather data from the WeatherApp API (which is based on data from [https://openweathermap.org](https://openweathermap.org/current)).
+## Heroku
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+The application has been posted on Heroku.
 
-## Further help
+You can test it in real time.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Click on the link below to check it out!
+
+---> __https://weather-service-frontend.herokuapp.com/__ <---
